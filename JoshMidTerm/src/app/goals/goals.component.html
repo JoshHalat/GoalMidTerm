@@ -1,0 +1,20 @@
+<h2>My Goals</h2>
+<div>
+    <label for="new-goal">Goals title: </label>
+    <input id="new-goal" #goalTitle />
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="add(goalTitle.value); goalTitle.value=''">
+      Add goal
+    </button>
+</div>
+
+<ul class="goals">
+    <li *ngFor="let goal of goals">
+      <a routerLink="/detail/{{goal.id}}">
+        <span class="badge">{{goal.id}}</span> {{goal.title}}
+      </a>
+      <button type="button" class="delete" title="delete goal"
+        (click)="delete(goal)">x</button>
+    </li>
+  </ul>

@@ -1,0 +1,7 @@
+<h2>Top Goals</h2>
+<div class="goals-menu">title
+  <a *ngFor="let goal of goals"
+      routerLink="/detail/{{goal.id}}">
+      {{goal.title}}
+  </a>
+</div>

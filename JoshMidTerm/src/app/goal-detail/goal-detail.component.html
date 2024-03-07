@@ -1,0 +1,12 @@
+<div *ngIf="goal">
+
+    <h2>{{goal.title | uppercase}} Details</h2>
+    <div><span>id: </span>{{goal.id}}</div>
+    <div>
+      <label for="goal-title">Goal title: </label>
+      <input id="goal-title" [(ngModel)]="goal.title" placeholder="title">
+    </div>
+  
+  </div>
+  <button type="button" (click)="save()">save</button>
+  <button type="button" (click)="goBack()">go back</button>
